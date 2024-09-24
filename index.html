@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <!---HEAD----->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Pancho III Bato</title>
+        <link rel="stylesheet" type="text/css" href="../PanzRock.github.io/style.css">
+    </head>
+
+
+    <!-----BODY----->
+    <body class="Background">
+
+        <!----Navbar----->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!----Breaks inserted to add space between navbar and the first heading---->
+        <br>
+        <br>
+
+        <!----Background video---->
+        <section class="banner">
+            <div class="banner-video">
+                <video autoplay muted loop id="Typing_Video">
+                    <source src="../PanzRock.github.io/61037-497754241_medium.mp4" type="video/mp4">
+                    <!----Display message if video fails to run---->
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        
+        <!----Text Video---->
+            <div class="banner-text">
+                <h1 class="white-text">My Portfolio</h1>
+                <strong>
+                    <p class="center">
+                        <q>"I'm not a great programmer; I'm just a good programmer with great habits"</q>
+                        <br> -Kent Beck
+                        <br>
+                        <br>As a web developer, my aspirations revolve around pushing the boundaries of digital innovation and creating seamless, intuitive user experiences. 
+                        I envision myself mastering cutting-edge technologies and frameworks to build responsive, high-performance websites and applications that captivate users and meet their evolving needs. 
+                        Beyond technical skills, I am driven by a passion for design and usability, striving to blend aesthetic appeal with functionality to craft solutions that not only solve problems but also inspire and delight. 
+                        Ultimately, I hope to contribute to projects that make a meaningful impact, whether by enhancing accessibility, fostering creativity, or supporting sustainable practices in the tech industry.
+                    </p>
+                </strong>
+            </div>
+        </section>
+        <!----About Section---->
+        <div class="Row" id="About">
+            <!--Left Column-->
+            <div class="Column_2">
+                <img src="../PanzRock.github.io/pexels-fauxels-3184454.jpg" alt="about picture">
+            </div>
+            <!--Right Coulmn-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>As a web developer, I thrive on transforming complex ideas into elegant, functional digital experiences.
+                    I relish the challenge of coding dynamic websites and applications that are not only visually appealing but also highly efficient and user-centric.
+                    My journey involves constantly learning and adapting to new technologies and frameworks, ensuring that my projects leverage the latest advancements to provide top-notch performance and security.
+                </p>
+            </div>
+        </div>
+
+        <!----GitHub Section---->
+        <div class="Row" id="GitHub">
+            <!--Left Column-->
+            <div class="Column_1">
+                <h1>PanzRock on GitHub</h1>
+                <p>You can view my coding projects on My GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/PanzRock" target="_blank">https://github.com/PanzRock</a></p>
+                </p>
+            </div>
+            <!--Right Column-->
+            <div class="Column_2">
+                <a href="https://github.com/PanzRock" target="_blank"><img src="../PanzRock.github.io/images.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!----Contact Section---->
+        <div class="Row" id="Contact">
+            <!--Contact Image, Left Column-->
+            <div class="Column_2 Column_tall">
+                <img src="../PanzRock.github.io/telephone-612061_1280.jpg" alt="Contact_Image">
+            </div>
+            <!--Contact Form, Right Column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <!--This specifies where and how to send the form data; we are leaving it blank.-->
+                <form action="" method="POST"><!--Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute.-->
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your mesage here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!----Footer Section---->
+        <footer>
+            <p>
+                <p class="center">&copyPanzRock Web Developing Company Inc., <a href="" target="_blank">PanzRock</a></p><br>
+            </p>
+        </footer>
+    </body>
+</html>
