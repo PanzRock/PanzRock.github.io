@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width" />
         <title>Pancho III Bato</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
 
@@ -28,7 +28,7 @@
         <section class="banner">
             <div class="banner-video">
                 <video autoplay muted loop id="Typing_Video">
-                    <source src="video.mp4" type="video/mp4">
+                    <source src="vid/video.mp4" type="video/mp4">
                     <!----Display message if video fails to run---->
                     Your browser does not support HTML5 video.
                 </video>
@@ -50,11 +50,51 @@
                 </strong>
             </div>
         </section>
+
+        <!--Slideshow Added-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!--Slide 1 of 4-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/html1.jpeg" alt="HTML, CSS, and JS logos">
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, and JavaScript,</div>
+                    </div>
+                    <!--Slide 2 of 4-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/pyton.png" alt="Python logo">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+                    <!--Slide 3 of 4-->
+                    <div class="mySlides fade">
+                        <img src="img/CS.png" alt="C# logo">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                    </div>
+                    <!--Slide 4 of 4-->
+                    <div class="mySlides fade">
+                        <img src="img/sql1.jpg" alt="SQL logo">
+                        <div class="text">back end development, database and SQL.</div>
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                    </div>
+                    <!--Prev and next button-->
+                    <a class="Previous" onclick="plusSLides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSLides(1)">&#10095;</a>
+                </div>
+                <br> <!--adds a space between the slideshow images and the dots-->
+                <!--Slideshow dots (this is another way for users to navigate through the slideshow)-->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </div>
         <!----About Section---->
         <div class="Row" id="About">
             <!--Left Column-->
             <div class="Column_2">
-                <img src="laptop.jpg" alt="about picture">
+                <img src="img/laptop.jpg" alt="about picture">
             </div>
             <!--Right Coulmn-->
             <div class="Column_1">
@@ -78,28 +118,24 @@
             </div>
             <!--Right Column-->
             <div class="Column_2">
-                <a href="https://github.com/PanzRock" target="_blank"><img src="logo.png" alt="GitHub Logo"></a>
+                <a href="https://github.com/PanzRock" target="_blank"><img src="img/logo.png" alt="GitHub Logo"></a>
             </div>
         </div>
 
         <!----Contact Section---->
-        <div class="Row" id="Contact">
-            <!--Contact Image, Left Column-->
-            <div class="Column_2 Column_tall">
-                <img src="telephone.jpg" alt="Contact_Image">
-            </div>
-            <!--Contact Form, Right Column-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank.-->
-                <form action="" method="POST"><!--Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute.-->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your mesage here">
-                        <input type="submit" value="SUBMIT">
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Type your name here..." name="name" required>
+                    <label for="phone"><b>Phone Number</b></label>
+                        <input type="text" placeholder="Type your phone number here..." name="phone">
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Type your email address here..." name="email">
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
@@ -110,5 +146,7 @@
                 <p class="center">&copyPanzRock Web Developing Company Inc., <a href="" target="_blank">PanzRock</a></p><br>
             </p>
         </footer>
+
+        <script src="js/main.js"></script>
     </body>
 </html>
